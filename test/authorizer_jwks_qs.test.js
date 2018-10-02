@@ -1,6 +1,5 @@
 const fs = require('fs');
 var fixture = require('./fixture/jwks_function');
-var request = require('request');
 var io = require('socket.io-client');
 var jwt = require('jsonwebtoken');
 

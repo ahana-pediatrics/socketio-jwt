@@ -17,3 +17,4 @@ deploy:
   api_key: $OHANA_NPM
   on:
     tags: true
+    branch: master
