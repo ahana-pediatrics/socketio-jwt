@@ -1,6 +1,7 @@
-var fixture = require('./fixture');
-var request = require('request');
-var io = require('socket.io-client');
+const {expect} = require('chai');
+const request = require('request');
+const io = require('socket.io-client');
+const fixture = require('./fixture');
 
 describe('authorizer', function () {
 
@@ -16,8 +17,8 @@ describe('authorizer', function () {
       });
 
       socket.on('error', function(err){
-        err.message.should.eql("jwt malformed");
-        err.code.should.eql("invalid_token");
+        expect(err.message).to.equal("jwt malformed");
+        expect(err.code).to.equal("invalid_token");
         socket.close();
         done();
       });
